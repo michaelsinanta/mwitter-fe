@@ -1,5 +1,5 @@
-Nama : Michael Christlambert Sinanta
-Stack : Next.JS dan TailwindCSS
+Nama : Michael Christlambert Sinanta<br>
+Stack : Next.JS dan TailwindCSS<br>
 
 Cara instalasi sesudah mengclone github ini adalah sebagai berikut: 
 1. npm install
