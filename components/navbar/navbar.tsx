@@ -2,7 +2,7 @@ import Link from "next/link";
 import { accessTokenState, userInformationState, updatingDataState, formDataState, sortState, myTweetSortState, tweetHomeListState, myTweetListState } from "../storage/storage";
 import { useRecoilState } from "recoil";
 import { BsFillChatLeftQuoteFill } from 'react-icons/bs';
-import { ChevronDownIcon, HamburgerIcon} from "@chakra-ui/icons";
+import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
@@ -30,14 +30,14 @@ const Navbar = ({ children }: { children: React.ReactNode }) => {
 
     const handleClose = () => {
         setAnchorEl(null);
-        setUpdatingData(false); 
+        setUpdatingData(false);
     };
 
     const logOut = async () => {
         fetch('http://127.0.0.1:8000/users/logout', {
             method: 'POST',
         })
-            .then(response => response.json()) 
+            .then(response => response.json())
             .then(data => {
                 setAccessToken(null);
                 setUpdatingData(false);
@@ -107,7 +107,7 @@ const Navbar = ({ children }: { children: React.ReactNode }) => {
                 <div className="flex items-center text-blue-900 hover:text-blue-800 cursor-pointer transition duration-150 ">
                     <Link href="/">
                         <div className="flex items-center space-x-2">
-                            <BsFillChatLeftQuoteFill size={25}/>
+                            <BsFillChatLeftQuoteFill size={25} />
                             <span className="font-semibold lg:text-2xl md:text-2xl text-lg text-blue-900 hover:text-blue-800">
                                 Mweet
                             </span>
