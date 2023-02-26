@@ -1,3 +1,12 @@
+Nama : Michael Christlambert Sinanta
+Stack : Next.JS dan TailwindCSS
+
+Cara instalasi sesudah mengclone github ini adalah sebagai berikut: 
+1. npm install
+2. npm run dev
+
+Sesudah frontend dijalankan, jalankan backendnya juga. Frontend dapat diakses melalui link http://localhost:3000/.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
