@@ -2,15 +2,13 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
-import { isUserModalOpenState, editFormDataState, updatingDataState, accessTokenState, tweetUpdateIdState, editUserDataState, imagePreviewState, userInformationState, commentModalOpenState, commentTweetListState } from '../storage/storage';
+import { updatingDataState, accessTokenState, tweetUpdateIdState, commentModalOpenState, commentTweetListState } from '../storage/storage';
 import { useRecoilState } from 'recoil';
 import { ChatIcon, CloseIcon } from "@chakra-ui/icons";
 import axios from 'axios';
 import { useEffect, useState, useRef } from "react";
 import toast from "@/components/commons/toast";
 import { useTheme } from '@mui/material/styles';
-
-
 
 export default function CommentModal() {
     const [isCommentModalOpen, setIsCommentModalOpen] = useRecoilState(commentModalOpenState);
@@ -49,6 +47,7 @@ export default function CommentModal() {
 
     const handleClose = () => {
         setIsCommentModalOpen(false);
+        setCommentTweetList([]);
     };
 
     const ax = axios.create({

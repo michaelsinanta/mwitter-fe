@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { isModalOpenState, searchUserInformationState, searchUserTweetListState, accessTokenState } from "../storage/storage";
+import { isModalOpenState, searchUserInformationState, searchUserTweetListState } from "../storage/storage";
 import axios from "axios";
 import Tweets from "../commons/tweets";
 import * as React from 'react';
