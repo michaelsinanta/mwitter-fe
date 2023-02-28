@@ -63,6 +63,11 @@ export const isModalOpenState = atom({
     default: false,
 })
 
+export const commentModalOpenState = atom({
+    key: 'commentModalOpenState',
+    default: false,
+})
+
 export const changePasswordModalOpenState = atom({
     key: 'changePasswordModalOpenState',
     default: false,
@@ -137,5 +142,10 @@ export const myTweetListState = atom({
 
 export const searchUserTweetListState = atom({
     key: 'searchUserTweetListState',
+    default: [],
+})
+
+export const commentTweetListState = atom({
+    key: 'commentTweetListState',
     default: [],
 })

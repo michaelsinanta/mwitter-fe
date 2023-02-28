@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { RecoilRoot } from 'recoil'
 import { useEffect, useState } from "react";
 import Navbar from '@/components/navbar/navbar';
+import Footer from '@/components/footer/footer';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [showing, setShowing] = useState(false);
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Navbar>
     <Component {...pageProps} />
     </Navbar>
+    <Footer/>
     </RecoilRoot>
     )
 }}

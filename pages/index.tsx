@@ -18,6 +18,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Tweets from '@/components/commons/tweets';
 import TweetModal from '@/components/modals/tweetModal';
+import CommentModal from '@/components/modals/addComment';
 import toast from "@/components/commons/toast";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify';
@@ -270,6 +271,7 @@ export default function Home() {
           <div />
         }
         <TweetModal />
+        <CommentModal />
         <ToastContainer />
       </main>
     </>

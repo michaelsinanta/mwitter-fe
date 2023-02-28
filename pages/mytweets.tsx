@@ -10,6 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import TweetModal from "@/components/modals/tweetModal";
+import CommentModal from "@/components/modals/addComment";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify';
 
@@ -88,6 +89,7 @@ export default function MyTweets() {
         </div>
       }
       <TweetModal />
+      <CommentModal/>
       <ToastContainer />
     </div>
   )
