@@ -80,7 +80,7 @@ export default function TweetModal() {
     };
 
     const ax = axios.create({
-        baseURL: 'http://localhost:8000/',
+        baseURL: 'https://mwitter.up.railway.app/',
         headers: {
             'Authorization': `Bearer ${accessToken}`,
             "Content-Type": "application/json",
@@ -106,7 +106,7 @@ export default function TweetModal() {
         payload.append("content", content);
         payload.append("is_public", is_public.toString());
         payload.append("close_friends", selectedIds.join(',').toString());
-        axios.patch(`http://localhost:8000/tweet/${tweetUpdateId}`, payload, {
+        ax.patch(`tweet/${tweetUpdateId}`, payload, {
             headers: {
                 'Authorization': `Bearer ${accessToken}`
             }

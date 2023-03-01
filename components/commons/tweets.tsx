@@ -17,7 +17,7 @@ export default function Tweets({ tweets }) {
     const deleteData = (event) => {
         event.preventDefault();
         setUpdatingData(true)
-        axios.delete(`http://localhost:8000/tweet/${tweets.id}`, {
+        ax.delete(`tweet/${tweets.id}`, {
             headers: {
                 "Authorization": `Bearer ${accessToken}`
             }
@@ -49,7 +49,7 @@ export default function Tweets({ tweets }) {
     }
 
     const ax = axios.create({
-        baseURL: 'http://localhost:8000/',
+        baseURL: 'https://mwitter.up.railway.app/',
         headers: {
             'Authorization': `Bearer ${accessToken}`,
             "Content-Type": "application/json",

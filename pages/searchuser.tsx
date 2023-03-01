@@ -26,7 +26,7 @@ export default function SearchUser() {
     }
 
     const ax = axios.create({
-        baseURL: 'http://localhost:8000/',
+        baseURL: 'https://mwitter.up.railway.app/',
         headers: {
             'Authorization': `Bearer ${accessToken}`,
             "Content-Type": "application/json",

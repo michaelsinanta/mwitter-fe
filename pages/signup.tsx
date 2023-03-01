@@ -31,7 +31,7 @@ export default function SignUp() {
     formdata.append("username", username);
     formdata.append("password", password);
     formdata.append("password2", password2);
-    await fetch('http://localhost:8000/users/register', {
+    await fetch('https://mwitter.up.railway.app/users/register', {
       method: 'POST',
       body: formdata,
     })

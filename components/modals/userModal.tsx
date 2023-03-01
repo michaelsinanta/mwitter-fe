@@ -55,7 +55,7 @@ export default function UserModal() {
     }
 
     const ax = axios.create({
-        baseURL: 'http://localhost:8000/',
+        baseURL: 'https://mwitter.up.railway.app/',
         headers: {
             'Authorization': `Bearer ${accessToken}`,
             "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export default function UserModal() {
             payload.append("photo_profile", photo_profile);
         }
         payload.append("bio", bio);
-        axios.patch(`http://localhost:8000/users/detail`, payload, {
+        ax.patch(`users/detail`, payload, {
             headers: {
                 'Authorization': `Bearer ${accessToken}`
             }

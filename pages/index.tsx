@@ -69,7 +69,7 @@ export default function Home() {
   };
 
   const ax = axios.create({
-    baseURL: 'http://localhost:8000/',
+    baseURL: 'https://mwitter.up.railway.app/',
     headers: {
       'Authorization': `Bearer ${accessToken}`,
       "Content-Type": "application/json",
@@ -145,7 +145,7 @@ export default function Home() {
     payload.append("content", formData.content);
     payload.append("is_public", formData.is_public.toString());
     payload.append("close_friends", selectedIds.join(',').toString());
-    axios.post('http://localhost:8000/tweet/', payload, {
+    ax.post('tweet/', payload, {
       headers: {
         'Authorization': `Bearer ${accessToken}`
       },
