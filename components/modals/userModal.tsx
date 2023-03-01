@@ -70,7 +70,7 @@ export default function UserModal() {
             payload.append("photo_profile", photo_profile);
         }
         payload.append("bio", bio);
-        ax.patch(`users/detail`, payload, {
+        axios.patch(`https://mwitter.up.railway.app/users/detail`, payload, {
             headers: {
                 'Authorization': `Bearer ${accessToken}`
             }
