@@ -34,7 +34,7 @@ const Navbar = ({ children }: { children: React.ReactNode }) => {
     };
 
     const logOut = async () => {
-        fetch('http://127.0.0.1:8000/users/logout', {
+        fetch('https://mwitter.up.railway.app/users/logout', {
             method: 'POST',
         })
             .then(response => response.json())
