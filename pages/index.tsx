@@ -122,10 +122,10 @@ export default function Home() {
 
   useEffect(() => {
     if (!updatingData && accessToken) {
-      if (sort == "latest" || myTweetSort == "latest") {
+      if (sort == "latest" ) {
         updateTweetsData();
         updateMyTweetsData();
-      } else if (sort == "oldest" || myTweetSort == "oldest") {
+      } else if (sort == "oldest") {
         updateTweetsDataOldest();
         updateMyTweetsDataOldest();
       }
