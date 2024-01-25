@@ -33,7 +33,7 @@ export default function ChangePassword() {
         formdata.append("current_password", form.current_password);
         formdata.append("new_password", form.new_password);
         // submit credentials
-        fetch('https://mwitter.up.railway.app/users/change-password', {
+        fetch(`${process.env.BASE_URL}users/change-password`, {
             method: 'POST',
             headers: {
                 "Authorization": `Bearer ${accessToken}`

@@ -38,7 +38,7 @@ export default function MyTweets() {
   }, [updatingData])
 
   const ax = axios.create({
-    baseURL: 'https://mwitter.up.railway.app/',
+    baseURL: process.env.BASE_URL,
     headers: {
       'Authorization': `Bearer ${accessToken}`,
       "Content-Type": "application/json",
