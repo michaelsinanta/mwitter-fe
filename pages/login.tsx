@@ -37,7 +37,7 @@ export default function Login() {
     var formdata = new FormData();
     formdata.append("email", form.email);
     formdata.append("password", form.password);
-    fetch('https://mwitter.up.railway.app/users/login', {
+    fetch(`${process.env.BASE_URL}users/login`, {
       method: 'POST',
       body: formdata,
     })
