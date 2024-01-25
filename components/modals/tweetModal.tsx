@@ -80,7 +80,7 @@ export default function TweetModal() {
     };
 
     const ax = axios.create({
-        baseURL: process.env.NEXT_PUBLIC_BASE_URL,
+        baseURL: process.env.NEXT_PUBLIC_API_URL,
         headers: {
             'Authorization': `Bearer ${accessToken}`,
             "Content-Type": "application/json",

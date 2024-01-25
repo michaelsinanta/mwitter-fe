@@ -37,7 +37,7 @@ export default function Login() {
     var formdata = new FormData();
     formdata.append("email", form.email);
     formdata.append("password", form.password);
-    fetch(`${process.env.NEXT_PUBLIC_BASE_URL}users/login`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}users/login`, {
       method: 'POST',
       body: formdata,
     })

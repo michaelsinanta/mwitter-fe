@@ -34,7 +34,7 @@ const Navbar = ({ children }: { children: React.ReactNode }) => {
     };
 
     const logOut = async () => {
-        fetch(`${process.env.NEXT_PUBLIC_BASE_URL}users/logout`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}users/logout`, {
             method: 'POST',
         })
             .then(response => response.json())
