@@ -55,7 +55,7 @@ export default function UserModal() {
     }
 
     const ax = axios.create({
-        baseURL: process.env.BASE_URL,
+        baseURL: process.env.NEXT_PUBLIC_BASE_URL,
         headers: {
             'Authorization': `Bearer ${accessToken}`,
             "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export default function UserModal() {
             payload.append("photo_profile", photo_profile);
         }
         payload.append("bio", bio);
-        axios.patch(`${process.env.BASE_URL}users/detail`, payload, {
+        axios.patch(`${process.env.NEXT_PUBLIC_BASE_URL}users/detail`, payload, {
             headers: {
                 'Authorization': `Bearer ${accessToken}`
             }

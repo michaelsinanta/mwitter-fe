@@ -31,7 +31,7 @@ export default function SignUp() {
     formdata.append("username", username);
     formdata.append("password", password);
     formdata.append("password2", password2);
-    await fetch(`${process.env.BASE_URL}users/register`, {
+    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}users/register`, {
       method: 'POST',
       body: formdata,
     })

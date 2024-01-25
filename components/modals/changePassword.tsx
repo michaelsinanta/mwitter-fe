@@ -33,7 +33,7 @@ export default function ChangePassword() {
         formdata.append("current_password", form.current_password);
         formdata.append("new_password", form.new_password);
         // submit credentials
-        fetch(`${process.env.BASE_URL}users/change-password`, {
+        fetch(`${process.env.NEXT_PUBLIC_BASE_URL}users/change-password`, {
             method: 'POST',
             headers: {
                 "Authorization": `Bearer ${accessToken}`
